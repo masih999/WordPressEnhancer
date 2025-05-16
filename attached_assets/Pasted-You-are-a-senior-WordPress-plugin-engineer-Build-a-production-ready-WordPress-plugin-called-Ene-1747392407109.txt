@@ -1,0 +1,88 @@
+You are a senior WordPress plugin engineer.
+
+Build a production-ready WordPress plugin called **“Energy Analytics”** that delivers an enterprise-grade energy–usage reporting suite.
+
+────────────────────────────────────────────────────────────────────────
+CORE FUNCTIONALITY
+────────────────────────────────────────────────────────────────────────
+1. ACF SYNC  
+   • On plugin activation – or via a manual “Sync Fields” button – import any user-supplied ACF JSON file and register / update all field groups (acf_add_local_field_group).  
+
+2. ADMIN MENUS (top-level “Energy Analytics”)  
+   ▸ **Energy Reports** → WP_List_Table (pagination + column filters) with bulk CSV export.  
+   ▸ **Analytics Dashboard** → interactive Chart.js (line, bar, pie) fed by a custom REST route `/energy/v1/stats`.  
+   ▸ **Custom Scripts** → CPT `ea_script` (title, code, target_form, active) edited with CodeMirror; capability `manage_energy_scripts`.  
+
+3. CALCULATION SCRIPT  
+   Enqueue the exact user-provided JavaScript (weights + energy percent) on any form that contains the related ACF fields, using  
+   `wp_add_inline_script( 'acf-input', $snippet, 'after' )`.
+
+4. CUSTOM SCRIPT INJECTOR  
+   In `acf/input/form_data`, loop over published `ea_script` posts; for each active script whose `target_form` is empty **or** matches the current form, inject its code with a unique nonce for CSP.
+
+5. DATA STORAGE  
+   Create table `wp_energy_logs` via dbDelta() (`id`, ACF keys, `user_id`, `created_at`; proper indexes). Insert each form submission with `$wpdb->insert`.
+
+6. EXPORT TO PDF  
+   Dompdf renders any report/dashboard view. Add “Export PDF” button; PDF downloads via AJAX.
+
+7. SETTINGS API  
+   Global options page (chart colours, PDF logo, cache-lifetimes). Save with Settings API; output is translated and sanitised.
+
+8. CAPABILITIES & ROLES  
+   Define capabilities:  
+     • `view_energy_reports`   • `edit_energy_reports`  
+     • `export_energy_pdf`    • `view_energy_dashboard`  
+     • `manage_energy_scripts`  
+   Add role **energy_manager** (inherits subscriber + all above caps).
+
+9. PERFORMANCE  
+   • Transient-cache heavy stats (5 min).  
+   • Enqueue assets with `filemtime` versioning.  
+   • Opt-in object cache hooks (`wp_cache_get`).  
+
+10. SECURITY  
+    • Nonces everywhere, capability checks, strict sanitisation.  
+    • CSP header `script-src 'self' 'nonce-%%%';` – issue matching nonce for every inline script.  
+    • REST endpoints protected by `rest_nonce` and basic rate-limit (Transient).  
+
+11. PHP VERSION CHECK  
+    • Plugin header **`Requires PHP: 7.4`**.  
+    • `register_activation_hook` aborts with `wp_die()` if `PHP_VERSION < 7.4`.
+
+────────────────────────────────────────────────────────────────────────
+ARCHITECTURE & TOOLING
+────────────────────────────────────────────────────────────────────────
+12. PSR-4 AUTOLOADER  
+    Provide a minimal `composer.json`; include Dompdf via Composer. Autoload classes in `src/` namespace `EA\`.
+
+13. UNINSTALL CLEANUP  
+    `uninstall.php` removes table, options and CPT content **only if** user ticks “Delete all plugin data” checkbox.
+
+14. WP-CLI COMMANDS  
+    • `wp energy sync-fields`   • `wp energy export --format=pdf`
+
+15. DATABASE MIGRATION  
+    Store schema version in `ea_db_version` option; run migrations in `plugins_loaded` when version mismatches.
+
+16. TESTS & CI  
+    • PHPUnit for PHP (matrix: 7.4, 8.1, 8.2).  
+    • Playwright or Cypress for JS form injection.  
+    • GitHub Actions workflow.
+
+────────────────────────────────────────────────────────────────────────
+DELIVERABLE FILES
+────────────────────────────────────────────────────────────────────────
+Return fully documented, ready-to-zip code in *exactly* these paths:
+
+• `energy-analytics.php`             (plugin header, activation hooks)  
+• `src/Admin/Admin.php`              (menus, list table, settings)  
+• `src/Admin/Scripts.php`            (CPT + injector)  
+• `src/REST/Endpoints.php`          (REST routes)  
+• `src/CLI/Commands.php`            (WP-CLI)  
+• `assets/js/ea-charts.js`          (Chart.js wrapper)  
+• `uninstall.php`                   (clean uninstall)  
+• `composer.json`                   (autoload + Dompdf)  
+• `readme.txt`                      (WordPress.org format)
+
+Each file must comply with WordPress-VIP PHPCS, include phpDocs, and load only the dependencies it needs. Output nothing except the complete code for the above files.
