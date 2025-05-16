@@ -2,7 +2,7 @@ modules = ["php"]
 
 [nix]
 channel = "stable-24_05"
-packages = ["php"]
+packages = ["php", "zip"]
 
 [workflows]
 runButton = "Project"
@@ -27,3 +27,7 @@ waitForPort = 5000
 
 [deployment]
 run = ["sh", "-c", "php -S 0.0.0.0:5000"]
+
+[[ports]]
+localPort = 5000
+externalPort = 80
