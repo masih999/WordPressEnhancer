@@ -1,0 +1,102 @@
+/**
+ * Energy Analytics Admin Styles
+ */
+
+/* General */
+.ea-dashboard-container {
+    margin-top: 20px;
+}
+
+/* Chart layout */
+.ea-chart-row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+}
+
+.ea-chart-col {
+    padding: 0 15px;
+    width: 50%;
+    margin-bottom: 30px;
+}
+
+@media (max-width: 1200px) {
+    .ea-chart-col {
+        width: 100%;
+    }
+}
+
+.ea-chart-card {
+    background: #fff;
+    border: 1px solid #e5e5e5;
+    box-shadow: 0 1px 1px rgba(0,0,0,.04);
+    padding: 20px;
+    border-radius: 3px;
+}
+
+.ea-chart-container {
+    height: 350px;
+    position: relative;
+}
+
+/* Settings pages */
+.ea-settings-section {
+    margin-bottom: 30px;
+}
+
+.ea-color-preview {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    vertical-align: middle;
+    margin-left: 10px;
+    border: 1px solid #ddd;
+}
+
+/* ACF Upload Form */
+.ea-acf-upload-container {
+    margin-bottom: 20px;
+}
+
+.ea-upload-form {
+    margin-top: 15px;
+    padding: 15px;
+    background: #f9f9f9;
+    border: 1px solid #e5e5e5;
+    border-radius: 4px;
+}
+
+.ea-upload-label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+#ea_acf_json_file {
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+/* Reports Table */
+.wp-list-table .column-id {
+    width: 50px;
+}
+
+.wp-list-table .column-user_id {
+    width: 150px;
+}
+
+.wp-list-table .column-created_at {
+    width: 150px;
+}
+
+/* Export Buttons */
+.ea-export-button {
+    margin-left: 10px !important;
+}
+
+/* Settings pages */
+.form-table th {
+    width: 250px;
+}

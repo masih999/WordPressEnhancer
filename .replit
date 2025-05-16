@@ -1,8 +1,6 @@
-modules = ["php"]
-
 [nix]
 channel = "stable-24_05"
-packages = ["php", "zip"]
+packages = ["php"]
 
 [workflows]
 runButton = "Project"
