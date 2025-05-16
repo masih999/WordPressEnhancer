@@ -1,0 +1,291 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Energy Analytics 1.0.0\n"
+"POT-Creation-Date: 2025-05-16 12:00+0330\n"
+"PO-Revision-Date: 2025-05-16 12:00+0330\n"
+"Last-Translator: Energy Analytics Team <info@example.com>\n"
+"Language-Team: Persian\n"
+"Language: fa_IR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: WP-CLI 2.8.1\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: vendor\n"
+
+#: energy-analytics.php:50
+msgid "Energy Analytics requires PHP 7.4 or higher. Please upgrade your PHP version."
+msgstr "برای استفاده از پلاگین «تحلیل انرژی» نیاز به PHP 7.4 یا بالاتر است. لطفاً نسخه PHP خود را ارتقا دهید."
+
+#: energy-analytics.php:51
+msgid "Plugin Activation Error"
+msgstr "خطای فعال‌سازی پلاگین"
+
+#: energy-analytics.php:92
+msgid "Energy Manager"
+msgstr "مدیر انرژی"
+
+#: energy-analytics.php:180
+msgid "Energy Analytics requires Composer dependencies to be installed. Please run \"composer install\" in the plugin directory."
+msgstr "پلاگین «تحلیل انرژی» نیاز به نصب وابستگی‌های Composer دارد. لطفاً دستور \"composer install\" را در دایرکتوری پلاگین اجرا کنید."
+
+#: energy-analytics.php:207
+msgid "Energy Scripts"
+msgstr "اسکریپت‌های انرژی"
+
+#: energy-analytics.php:208
+msgid "Energy Script"
+msgstr "اسکریپت انرژی"
+
+#: energy-analytics.php:210
+msgid "Add New"
+msgstr "افزودن جدید"
+
+#: energy-analytics.php:211
+msgid "Add New Script"
+msgstr "افزودن اسکریپت جدید"
+
+#: energy-analytics.php:212
+msgid "Edit"
+msgstr "ویرایش"
+
+#: energy-analytics.php:213
+msgid "Edit Script"
+msgstr "ویرایش اسکریپت"
+
+#: energy-analytics.php:214
+msgid "New Script"
+msgstr "اسکریپت جدید"
+
+#: energy-analytics.php:215
+msgid "View Script"
+msgstr "مشاهده اسکریپت"
+
+#: energy-analytics.php:217
+msgid "Search Scripts"
+msgstr "جستجوی اسکریپت‌ها"
+
+#: energy-analytics.php:218
+msgid "No scripts found"
+msgstr "اسکریپتی پیدا نشد"
+
+#: energy-analytics.php:219
+msgid "No scripts found in trash"
+msgstr "اسکریپتی در سطل زباله پیدا نشد"
+
+#: src/Admin/Admin.php:41
+#: src/Admin/Admin.php:42
+msgid "Energy Analytics"
+msgstr "تحلیل انرژی"
+
+#: src/Admin/Admin.php:52
+#: src/Admin/Admin.php:53
+msgid "Energy Reports"
+msgstr "گزارش‌های انرژی"
+
+#: src/Admin/Admin.php:61
+#: src/Admin/Admin.php:62
+msgid "Analytics Dashboard"
+msgstr "داشبورد تحلیلی"
+
+#: src/Admin/Admin.php:70
+#: src/Admin/Admin.php:71
+msgid "Custom Scripts"
+msgstr "اسکریپت‌های سفارشی"
+
+#: src/Admin/Admin.php:79
+#: src/Admin/Admin.php:80
+msgid "Settings"
+msgstr "تنظیمات"
+
+#: src/Admin/Admin.php:95
+#: src/Admin/Admin.php:179
+#: src/Admin/Admin.php:276
+msgid "You do not have sufficient permissions to access this page."
+msgstr "شما مجوز کافی برای دسترسی به این صفحه را ندارید."
+
+#: src/Admin/Admin.php:118
+msgid "Sync ACF Fields"
+msgstr "همگام‌سازی فیلدهای ACF"
+
+#: src/Admin/Admin.php:124
+msgid "Export to PDF"
+msgstr "خروجی PDF"
+
+#: src/Admin/Admin.php:164
+#: src/Admin/Admin.php:263
+msgid "An error occurred during the export process"
+msgstr "خطایی در فرآیند خروجی رخ داد"
+
+#: src/Admin/Admin.php:187
+msgid "Energy Analytics Dashboard"
+msgstr "داشبورد تحلیل انرژی"
+
+#: src/Admin/Admin.php:191
+msgid "Export Dashboard to PDF"
+msgstr "خروجی داشبورد به PDF"
+
+#: src/Admin/Admin.php:198
+msgid "Energy Usage Over Time"
+msgstr "مصرف انرژی در طول زمان"
+
+#: src/Admin/Admin.php:207
+msgid "Energy Distribution"
+msgstr "توزیع انرژی"
+
+#: src/Admin/Admin.php:218
+msgid "Consumption by Source"
+msgstr "مصرف بر اساس منبع"
+
+#: src/Admin/Admin.php:227
+msgid "Efficiency Metrics"
+msgstr "معیارهای کارایی"
+
+#: src/Admin/Admin.php:283
+msgid "Energy Analytics Settings"
+msgstr "تنظیمات تحلیل انرژی"
+
+#: src/Admin/Admin.php:348
+msgid "Appearance Settings"
+msgstr "تنظیمات ظاهری"
+
+#: src/Admin/Admin.php:356
+msgid "Performance Settings"
+msgstr "تنظیمات عملکرد"
+
+#: src/Admin/Admin.php:364
+msgid "ACF Settings"
+msgstr "تنظیمات ACF"
+
+#: src/Admin/Admin.php:371
+msgid "Primary Chart Color"
+msgstr "رنگ اصلی نمودار"
+
+#: src/Admin/Admin.php:380
+msgid "Secondary Chart Color"
+msgstr "رنگ ثانویه نمودار"
+
+#: src/Admin/Admin.php:389
+msgid "Tertiary Chart Color"
+msgstr "رنگ سوم نمودار"
+
+#: src/Admin/Admin.php:398
+msgid "Quaternary Chart Color"
+msgstr "رنگ چهارم نمودار"
+
+#: src/Admin/Admin.php:407
+msgid "PDF Logo URL"
+msgstr "آدرس لوگو PDF"
+
+#: src/Admin/Admin.php:416
+msgid "Cache Lifetime (seconds)"
+msgstr "طول عمر کش (ثانیه)"
+
+#: src/Admin/Admin.php:425
+msgid "ACF JSON Path"
+msgstr "مسیر فایل JSON مربوط به ACF"
+
+#: src/Admin/Admin.php:440
+msgid "Customize the appearance of charts and PDF exports."
+msgstr "ظاهر نمودارها و خروجی‌های PDF را سفارشی کنید."
+
+#: src/Admin/Admin.php:451
+msgid "Configure caching and performance settings."
+msgstr "تنظیمات کش و عملکرد را پیکربندی کنید."
+
+#: src/Admin/Admin.php:462
+msgid "Configure Advanced Custom Fields integration."
+msgstr "یکپارچه‌سازی با فیلدهای سفارشی پیشرفته (ACF) را پیکربندی کنید."
+
+#: src/Admin/Admin.php:504
+msgid "URL to the logo image to use in PDF exports."
+msgstr "آدرس تصویر لوگو برای استفاده در خروجی‌های PDF."
+
+#: src/Admin/Admin.php:525
+msgid "The time in seconds that API responses should be cached. Set to 0 to disable caching."
+msgstr "زمان به ثانیه که پاسخ‌های API باید در کش ذخیره شوند. برای غیرفعال کردن کش، مقدار را 0 قرار دهید."
+
+#: src/Admin/Admin.php:549
+msgid "Path to ACF JSON file"
+msgstr "مسیر فایل JSON مربوط به ACF"
+
+#: src/Admin/Admin.php:553
+msgid "Enter the path to your ACF JSON file, or upload a new file below."
+msgstr "مسیر فایل JSON مربوط به ACF را وارد کنید، یا فایل جدیدی را در زیر آپلود نمایید."
+
+#: src/Admin/Admin.php:558
+msgid "Upload ACF JSON File:"
+msgstr "آپلود فایل JSON مربوط به ACF:"
+
+#: src/Admin/Admin.php:561
+msgid "Upload and Save"
+msgstr "آپلود و ذخیره"
+
+#: src/Admin/Scripts.php:29
+msgid "Script Information"
+msgstr "اطلاعات اسکریپت"
+
+#: src/Admin/Scripts.php:38
+msgid "Test Script"
+msgstr "آزمایش اسکریپت"
+
+#: src/Admin/Scripts.php:85
+msgid "Utility Functions"
+msgstr "توابع کمکی"
+
+#: src/Admin/Scripts.php:86
+msgid "Energy Calculations"
+msgstr "محاسبات انرژی"
+
+#: src/Admin/Scripts.php:87
+msgid "Unit Conversion"
+msgstr "تبدیل واحد"
+
+#: src/Admin/Scripts.php:88
+msgid "Reporting"
+msgstr "گزارش‌دهی"
+
+#: src/Admin/Scripts.php:89
+msgid "Other"
+msgstr "سایر"
+
+#: src/Admin/Scripts.php:93
+msgid "Version:"
+msgstr "نسخه:"
+
+#: src/Admin/Scripts.php:98
+msgid "Author:"
+msgstr "نویسنده:"
+
+#: src/Admin/Scripts.php:103
+msgid "Category:"
+msgstr "دسته‌بندی:"
+
+#: src/Admin/Scripts.php:121
+msgid "Here you can test your script by providing sample input data and checking the results."
+msgstr "اینجا می‌توانید اسکریپت خود را با ارائه داده‌های نمونه ورودی آزمایش کرده و نتایج را بررسی کنید."
+
+#: src/Admin/Scripts.php:124
+msgid "Test Input (JSON):"
+msgstr "داده ورودی آزمایشی (JSON):"
+
+#: src/Admin/Scripts.php:129
+msgid "Run Script"
+msgstr "اجرای اسکریپت"
+
+#: src/Admin/Scripts.php:130
+msgid "Clear Output"
+msgstr "پاک کردن خروجی"
+
+#: src/Admin/Scripts.php:134
+msgid "Output:"
+msgstr "خروجی:"
+
+#: src/Admin/Scripts.php:139
+msgid "Console:"
+msgstr "کنسول:"

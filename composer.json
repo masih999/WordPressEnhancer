@@ -1,0 +1,22 @@
+{
+    "name": "energy-analytics/energy-analytics",
+    "description": "Enterprise-grade energy-usage reporting suite for WordPress",
+    "type": "wordpress-plugin",
+    "license": "GPL-2.0-or-later",
+    "authors": [
+        {
+            "name": "Energy Analytics Team",
+            "email": "info@example.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "php": ">=7.4",
+        "dompdf/dompdf": "^2.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "EA\\": "src/"
+        }
+    }
+}
